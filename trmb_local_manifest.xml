@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="4" revision="pyro"/>
+
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://github.com/Freescale" name="freescale"/>
+
+  <project remote="yocto" revision="pyro" name="poky" path="poky"/>
+
+  <project remote="freescale" revision="pyro" name="meta-freescale" path="poky/meta-freescale"/>
+  <project remote="freescale" revision="pyro" name="meta-freescale-3rdparty" path="poky/meta-freescale-3rdparty"/>
+  <project remote="freescale" revision="pyro" name="meta-freescale-distro" path="poky/meta-freescale-distro"/>
+  <project remote="freescale" revision="pyro" name="Documentation" path="poky/Documentation_fsl"/>
+
+</manifest>
