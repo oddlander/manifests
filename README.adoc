@@ -31,7 +31,11 @@ The source code is checked out at trmb-yocto-bsp/sources.
 
 * trimble boards:
 trmb_imx51_imc
+
 trmb_imx51_ccb
+
 trmb_imx51_ipcr3
+
 trmb_zynq_guru
+
 trmb_zynq_ccb
