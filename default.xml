@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="1" revision="pyro"/>
+  <default sync-j="4" revision="pyro"/>
 
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/Freescale" name="freescale"/>
-  <remote fetch="https://github.com/Xilinx" name="xilinx"/>
-  <remote fetch="https://github.com/oddlander" name="oddan"/>
+  <remote fetch="https://github.com/openembedded" name="oe"/>
 
   <project remote="yocto" revision="pyro" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="pyro" name="meta-freescale" path="sources/meta-freescale"/>
 
-  <project remote="oddan" revision="master" name="trmb-bsp-base" path="sources/trmb-base">
+  <project remote="oe" revision="pyro" name="meta-openembedded" path="sources/meta-openembedded"/>
+
+  <project remote="freescale" revision="pyro" name="fsl-community-bsp-base" path="sources/base">
 	<linkfile dest="README" src="README"/>
 	<linkfile dest="setup-environment" src="setup-environment"/>
   </project>
 
-  <project remote="yocto" revision="pyro" name="meta-freescale" path="sources/poky/meta-freescale"/>
-  <project remote="freescale" revision="pyro" name="meta-freescale-3rdparty" path="sources/poky/meta-freescale-3rdparty"/>
-  <project remote="xilinx" revision="pyro" name="meta-xilinx" path="sources/poky/meta-xilinx"/>
-  <project remote="oddan" revision="master" name="meta-trimble" path="sources/poky/meta-trimble"/>
+  <project remote="freescale" revision="pyro" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
+  <project remote="freescale" revision="pyro" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
+  <project remote="freescale" revision="pyro" name="Documentation" path="sources/Documentation"/>
 
 </manifest>
