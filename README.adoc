@@ -15,7 +15,7 @@ Download the BSP source:
 $: PATH=${PATH}:~/bin
 $: mkdir trmb-yocto-bsp
 $: cd trmb-yocto-bsp
-$: repo init -u https://github.com/oddlander/trmb_yocto -b pyro
+$: repo init -u https://github.com/oddlander/trmb-yocto
 $: repo sync
 
 At the end of the commands you (hopefully) have every metadata you need to start working...
