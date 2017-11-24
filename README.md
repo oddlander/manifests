@@ -1,29 +1,57 @@
-= Trimble BSP(s)
+Trimble Repo Manifest For Yocto
+=============================================
+This repository provides Repo manifests to setup the Yocto build system for
+supported Trimble boards as well as manufacutrers (Xilinx & Freescale) eval boards.
 
-To get the BSP(s) you need to have repo installed and use it as:
+Getting Started
+---------------
+**1.  Install Repo.**
 
-Install the repo utility:
+Download the Repo script:
 
-[source,console]
-$: mkdir ~/bin
-$: curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-$: chmod a+x ~/bin/repo
+    $ curl https://storage.googleapis.com/git-repo-downloads/repo > repo
 
-Download the BSP source:
+Make it executable:
 
-[source,console]
-$: PATH=${PATH}:~/bin
-$: mkdir trmb-yocto-bsp
-$: cd trmb-yocto-bsp
-$: repo init -u https://github.com/oddlander/trmb-yocto
-$: repo sync
+    $ chmod a+x repo
+
+Move it on to your system path:
+
+    $ sudo mv repo /usr/local/bin/
+
+If it is correctly installed, you should see a Usage message when invoked
+with the help flag.
+
+    $ repo --help
+
+
+**2.  Initialize a Repo client.**
+
+Create an empty directory to hold your working files:
+
+    $ mkdir trmb-yocto-bsp
+    $ cd trmb-yocto-bsp
+
+To test out the release branch type:
+
+    $ repo init -u https://github.com/oddlander/trmb-yocto -b master
+
+A successful initialization will end with a message stating that Repo is
+initialized in your working directory. Your directory should now contain a
+.repo directory.
+
+**3.  Fetch all the repositories:**
+
+    $ repo sync
 
 At the end of the commands you (hopefully) have every metadata you need to start working...
+***
 
-To start a simple yocto image build:
-[source,console]
-$: MACHINE=<a_specific_trimble_board(1)> source ./setup-environment <name of build directory(2)>
-$: bitbake core-image-minimal
+
+**4. To start a simple yocto image build:
+
+    $: MACHINE=<a_specific_trimble_board(1)> source ./setup-environment <name of build directory(2)>
+    $: bitbake core-image-minimal
 
 You can use any directory to host your build.
 
