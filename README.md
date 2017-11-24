@@ -45,6 +45,7 @@ initialized in your working directory. Your directory should now contain a
     $ repo sync
 
 At the end of the commands you (hopefully) have every metadata you need to start working...
+The source code is checked out at trmb-yocto-bsp/sources.
 ***
 
 
@@ -54,8 +55,6 @@ At the end of the commands you (hopefully) have every metadata you need to start
     $: bitbake core-image-minimal
 
 You can use any directory to host your build.
-
-The source code is checked out at trmb-yocto-bsp/sources.
 
 (1) trimble boards:
 trmb_imx51_imc 
