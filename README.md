@@ -49,7 +49,7 @@ The source code is checked out at trmb-yocto-bsp/sources.
 ***
 
 
-**4. To start a simple yocto image build:
+**4. To start a simple yocto image build:**
 
     $: MACHINE=<a_specific_trimble_board(1)> source ./setup-environment <name of build directory(2)>
     $: bitbake core-image-minimal
