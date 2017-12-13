@@ -6,7 +6,7 @@
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/Freescale" name="freescale"/>
   <remote fetch="https://github.com/Xilinx" name="xilinx"/>
-  <remote fetch="https://github.com/oddlander" name="oddan"/>
+  <remote fetch="ssh://git@github.com/oddlander" name="oddan"/>
 
   <project remote="yocto" revision="pyro" name="poky" path="sources/poky"/>
 

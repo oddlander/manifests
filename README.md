@@ -32,9 +32,9 @@ Create an empty directory to hold your working files:
     $ mkdir trmb-yocto-bsp
     $ cd trmb-yocto-bsp
 
-To test out the release branch type:
+To test out the master branch type:
 
-    $ repo init -u https://github.com/oddlander/trmb-yocto -b master
+    $ repo init -u ssh://git@github.com/oddlander/trmb-yocto
 
 A successful initialization will end with a message stating that Repo is
 initialized in your working directory. Your directory should now contain a
@@ -51,17 +51,28 @@ The source code is checked out at trmb-yocto-bsp/sources.
 
 **4. To start a simple yocto image build:**
 
-    $: MACHINE=<a_specific_trimble_board(1)> source ./setup-environment <name of build directory(2)>
+    $: MACHINE=<a_specific_board(1)> source setup-environment <name of build directory(2)>
     $: bitbake core-image-minimal
 
-You can use any directory to host your build.
+(1) besides the Freescale/Xilinx boards, there are a couple of Trimble boards:
+imx51-imc 
+imx51-ccb 
+imx51-ipcr3 
+zynq-guru 
+zynq-ccb 
 
-(1) trimble boards:
-trmb_imx51_imc 
-trmb_imx51_ccb 
-trmb_imx51_ipcr3 
-trmb_zynq_guru 
-trmb_zynq_ccb 
+(2) You can use any directory to host your build.
+eg:
+build-imx51-imc
+***
 
-(2) eg:
-build_imc
+**5. Next time...**
+
+Next time you're working with this board/machine you have to reinitialize the above created build enviroment
+
+    $: source setup-environment <name of build directory(3)>
+
+(3) tip: use tab-completion
+
+
+
